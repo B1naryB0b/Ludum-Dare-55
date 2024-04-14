@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9003482301904562252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6056879230221033348}
+  - component: {fileID: 6775651607351389048}
+  - component: {fileID: 5697043656031332703}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6056879230221033348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003482301904562252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6775651607351389048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003482301904562252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e36cd5a08b2df4b8493fe6710062ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  summonPoint: {fileID: 0}
+  startingItems:
+  - {fileID: 11400000, guid: 983d548306b9b894585085a91dc14932, type: 2}
+  - {fileID: 11400000, guid: 68df959ac872dc243b234f2dc1e424ff, type: 2}
+  - {fileID: 11400000, guid: 5b8ca9b06a59d354ab95d6095fd78fa5, type: 2}
+  - {fileID: 11400000, guid: 68df959ac872dc243b234f2dc1e424ff, type: 2}
+  maxItems: 10
+  currentIngredients:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &5697043656031332703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003482301904562252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f9a8b682177be4daddf7751e6b6c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 0}
+  itemPrefab: {fileID: 713903628004943970, guid: 956dda26f604e0940a2409eeeae8ac0c, type: 3}
+  gridOffset: {x: -128, y: 70}
+  gridSpacing: {x: 128, y: 128}

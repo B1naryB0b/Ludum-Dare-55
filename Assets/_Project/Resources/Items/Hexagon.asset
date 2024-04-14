@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adeb12689e28dd848bf8fc4c564566de, type: 3}
+  m_Name: Hexagon
+  m_EditorClassIdentifier: 
+  itemName: Hexagon
+  sprite: {fileID: 2747690628134850419, guid: 4c9c52c1dd1e8ee438a83570b3621d6e, type: 3}
+  flavourText: 
+  velocityScaling: 100
+  maxVelocity: 15
+  defaultGravity: 1

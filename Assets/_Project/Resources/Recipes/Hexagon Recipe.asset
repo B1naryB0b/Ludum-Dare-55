@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd3f364f7430ab4fbb9c78456caab1b, type: 3}
+  m_Name: Hexagon Recipe
+  m_EditorClassIdentifier: 
+  ingredients:
+  - {fileID: 11400000, guid: 983d548306b9b894585085a91dc14932, type: 2}
+  - {fileID: 11400000, guid: 68df959ac872dc243b234f2dc1e424ff, type: 2}
+  - {fileID: 11400000, guid: 5b8ca9b06a59d354ab95d6095fd78fa5, type: 2}
+  summon: {fileID: 11400000, guid: b7fb20cad9b03994db0275a643b5992e, type: 2}
