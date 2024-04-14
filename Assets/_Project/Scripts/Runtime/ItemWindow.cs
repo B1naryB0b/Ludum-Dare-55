@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ItemWindow : MonoBehaviour
@@ -8,32 +9,34 @@ public class ItemWindow : MonoBehaviour
     [SerializeField] private GameObject content;
     [SerializeField] private GameObject itemPrefab;
 
-    [SerializeField] private Vector2 gridOffset;
-    [SerializeField] private Vector2 gridSpacing;
+    [FormerlySerializedAs("gridOffset")] [SerializeField] private Vector2 offset;
+    [FormerlySerializedAs("gridSpacing")] [SerializeField] private Vector2 spacing;
 
     private SummonFactory _summonFactory;
     private List<ItemSO> _items;
 
     void Start()
     {
-        _summonFactory = FindObjectOfType<SummonFactory>();
-        _items = new List<ItemSO>(Resources.LoadAll<ItemSO>("Items"));
-
-        content.DestroyAllChildren();
-
-        DrawItems(content, gridOffset, gridSpacing);
+        _summonFactory = GetComponent<SummonFactory>();
     }
 
-    private void DrawItems(GameObject parent, Vector2 offset, Vector2 spacing)
+    public void LoadItems(List<ItemSO> items)
     {
+        _items = items;
+    }
+    
+    public void DrawItems()
+    {
+        content.DestroyAllChildren();
+        
         for (int i = 0; i < _items.Count; i++)
         {
-            int x = i % (int)(parent.GetComponent<RectTransform>().rect.width / spacing.x);
-            int y = i / (int)(parent.GetComponent<RectTransform>().rect.width / spacing.x);
+            int x = i % (int)(content.GetComponent<RectTransform>().rect.width / spacing.x);
+            int y = i / (int)(content.GetComponent<RectTransform>().rect.width / spacing.x);
 
             Vector2 position = new Vector2(x * spacing.x + offset.x, -y * spacing.y - offset.y);
 
-            GameObject itemObject = Instantiate(itemPrefab, parent.transform);
+            GameObject itemObject = Instantiate(itemPrefab, content.transform);
 
             RectTransform rectTransform = itemObject.GetComponent<RectTransform>();
             rectTransform.anchoredPosition = position;

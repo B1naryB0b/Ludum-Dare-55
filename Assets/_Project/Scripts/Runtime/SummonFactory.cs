@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ public class SummonFactory : MonoBehaviour
 
     [SerializeField] private Transform summonPoint;
     [SerializeField] private List<ItemSO> startingItems;
+    public List<ItemSO> StartingItems => startingItems;
     [SerializeField] private int maxItems;
 
     private Queue<GameObject> _activeItemObjects = new Queue<GameObject>();
@@ -19,9 +21,12 @@ public class SummonFactory : MonoBehaviour
     
     private Dictionary<GameObject, ItemSO> _itemObjectMap = new Dictionary<GameObject, ItemSO>();
 
+    private UnlockedItems _unlockedItems;
+
     
     void Start()
     {
+        _unlockedItems = GetComponent<UnlockedItems>();
         _recipes = new List<RecipeSO>(Resources.LoadAll<RecipeSO>("Recipes"));
         Debug.Log(_recipes[0].name);
         
@@ -121,8 +126,18 @@ public class SummonFactory : MonoBehaviour
 
     private bool ContainsIngredient(ItemSO ingredient)
     {
+        if (ingredient == null)
+        {
+            throw new ArgumentNullException(nameof(ingredient), "Ingredient cannot be null.");
+        }
+    
         foreach (var ingredientObject in currentIngredients)
         {
+            if (ingredientObject == null)
+            {
+                continue;
+            }
+
             if (_itemObjectMap.TryGetValue(ingredientObject, out var itemSO) && itemSO == ingredient)
             {
                 return true;
@@ -130,6 +145,7 @@ public class SummonFactory : MonoBehaviour
         }
         return false;
     }
+
 
 
     private void ClearAllIngredients()
@@ -163,6 +179,8 @@ public class SummonFactory : MonoBehaviour
         
         _activeItemObjects.Enqueue(newItem);
         CheckItemCount();
+        
+        _unlockedItems.CheckIfUnlocked(item);
     }
 
     private void CheckItemCount()
