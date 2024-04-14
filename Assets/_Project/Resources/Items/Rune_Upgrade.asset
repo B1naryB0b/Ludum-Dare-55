@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adeb12689e28dd848bf8fc4c564566de, type: 3}
-  m_Name: Triangle
+  m_Name: Rune_Upgrade
   m_EditorClassIdentifier: 
-  itemName: Triangle
-  sprite: {fileID: 7482667652216324306, guid: adab4442483d5a2449fcb597c78d0aca, type: 3}
+  itemName: Upgrade
+  sprite: {fileID: 21300000, guid: 14be72e3482e90c4b898af09ddb55d11, type: 3}
   flavourText: 
-  velocityScaling: 150
-  maxVelocity: 15
-  defaultGravity: 1
+  velocityScaling: 0.5
+  maxVelocity: 5
+  defaultGravity: 2

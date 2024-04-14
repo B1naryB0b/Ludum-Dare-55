@@ -26,17 +26,20 @@ public class Drag : MonoBehaviour
     {
         if (_isDragging)
         {
-            var position = transform.position;
             Vector3 mousePosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector3 targetPosition = mousePosition + _offset;
-            targetPosition.z = position.z;
+            targetPosition.z = 0f;
+            
+            float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+            float dampingFactor = Mathf.Clamp01(distanceToTarget * _velocityScaling);
+            float scaledVelocity = dampingFactor * _maxVelocity;
 
-            float distanceToTarget = Vector3.Distance(position, targetPosition);
-            float scaledVelocity = Mathf.Clamp(distanceToTarget * _velocityScaling, 0f, _maxVelocity);
-
-            _rigidbody2D.velocity = Vector3.MoveTowards(_rigidbody2D.velocity, (targetPosition - position).normalized * scaledVelocity, scaledVelocity * Time.deltaTime);
+            Vector3 newPosition = Vector3.Lerp(transform.position, targetPosition, scaledVelocity * Time.deltaTime);
+            _rigidbody2D.velocity = (newPosition - transform.position) / Time.deltaTime;
+            transform.position = newPosition;
         }
     }
+
 
     public void Configure(ItemSO item)
     {

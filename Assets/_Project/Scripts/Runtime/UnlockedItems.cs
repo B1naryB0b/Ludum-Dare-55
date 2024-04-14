@@ -23,6 +23,8 @@ public class UnlockedItems : MonoBehaviour
             {
                 _unlockedItems.Add(item);
             }
+            
+            _summonFactory.ConstructItem(item);
         }
         
         _itemWindow.LoadItems(_unlockedItems);

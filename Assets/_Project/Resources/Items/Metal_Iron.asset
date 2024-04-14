@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adeb12689e28dd848bf8fc4c564566de, type: 3}
-  m_Name: Ball
+  m_Name: Metal_Iron
   m_EditorClassIdentifier: 
-  itemName: Ball
-  sprite: {fileID: -2413806693520163455, guid: fbeea8ae4d40f654693b6fc50860b69c, type: 3}
+  itemName: 
+  sprite: {fileID: 0}
   flavourText: 
-  velocityScaling: 100
-  maxVelocity: 15
+  velocityScaling: 0.5
+  maxVelocity: 10
   defaultGravity: 1

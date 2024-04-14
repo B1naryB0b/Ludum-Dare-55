@@ -30,10 +30,6 @@ public class SummonFactory : MonoBehaviour
         _recipes = new List<RecipeSO>(Resources.LoadAll<RecipeSO>("Recipes"));
         Debug.Log(_recipes[0].name);
         
-        foreach (var item in startingItems)
-        {
-            ConstructItem(item);
-        }
     }
     
     public void UpdateIngredient(int index, GameObject ingredient)
@@ -167,7 +163,8 @@ public class SummonFactory : MonoBehaviour
         SpriteRenderer spriteRenderer = newItem.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = item.sprite;
 
-        newItem.AddComponent<PolygonCollider2D>();
+        PolygonCollider2D col = newItem.AddComponent<PolygonCollider2D>();
+        col.layerOverridePriority = 10;
 
         Rigidbody2D rb2D = newItem.AddComponent<Rigidbody2D>();
         rb2D.gravityScale = item.defaultGravity;

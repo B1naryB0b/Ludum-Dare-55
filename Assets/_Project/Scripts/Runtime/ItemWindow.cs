@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -41,7 +42,7 @@ public class ItemWindow : MonoBehaviour
             RectTransform rectTransform = itemObject.GetComponent<RectTransform>();
             rectTransform.anchoredPosition = position;
 
-            Image image = itemObject.GetComponent<Image>();
+            Image image = itemObject.GetComponentsInChildren<Image>(true).FirstOrDefault(img => img.gameObject != itemObject);
             image.sprite = _items[i].sprite;
             
             Button button = itemObject.GetComponent<Button>();

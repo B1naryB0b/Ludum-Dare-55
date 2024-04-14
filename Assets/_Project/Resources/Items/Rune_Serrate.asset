@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adeb12689e28dd848bf8fc4c564566de, type: 3}
-  m_Name: Square
+  m_Name: Rune_Serrate
   m_EditorClassIdentifier: 
-  itemName: Square
-  sprite: {fileID: 7482667652216324306, guid: 38f545b07197a094f9afa0425c2bd42f, type: 3}
+  itemName: Serrate
+  sprite: {fileID: 21300000, guid: 59fa50b0e38f9ac4dba0cf0ee8593962, type: 3}
   flavourText: 
-  velocityScaling: 100
-  maxVelocity: 15
-  defaultGravity: 3
+  velocityScaling: 0.5
+  maxVelocity: 5
+  defaultGravity: 2

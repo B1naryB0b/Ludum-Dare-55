@@ -13,7 +13,8 @@ public class ItemSO : ScriptableObject
    public string flavourText;
 
    [Header("Movement")]
-   public float velocityScaling;
-   public float maxVelocity;
+   [Range(0f, 1f)]
+   public float velocityScaling = 0.5f;
+   public float maxVelocity = 10f;
    public float defaultGravity = 1f;
 }
