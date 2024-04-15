@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Legendary_Gungnir
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 76681394c9e74db44a55ac699fc821c2, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Gungnir
+  flavourText: "A spear gifted to Odin. You should probably return it. Without him
+    finding out. Seriously. Maybe he\u2019ll bless you."
+  type: Legendary
   prefab: {fileID: 272898725531284962, guid: 3b2e0ed286700154197558ebd31c8a37, type: 3}
   velocityScaling: 0.5
   maxVelocity: 5

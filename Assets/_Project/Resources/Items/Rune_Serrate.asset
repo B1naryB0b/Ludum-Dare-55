@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Rune_Serrate
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 59fa50b0e38f9ac4dba0cf0ee8593962, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Serration
+  flavourText: "Adds some barbs to your weapon for maximum ouch.\r"
+  type: Rune
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 5

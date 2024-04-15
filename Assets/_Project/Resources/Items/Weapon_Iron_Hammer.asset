@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Weapon_Iron_Hammer
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 90db8dda74aa41147885ad0cc968119e, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Iron Hammer
+  flavourText: "You won\u2019t want this coming at your face."
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

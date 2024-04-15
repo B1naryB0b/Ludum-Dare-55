@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Mithril_Spear
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 36f77003fcb4b4a41a185312d48560ab, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Mithril Spear
+  flavourText: Twirling this thing around, you feel graceful as a swan running on
+    water.
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

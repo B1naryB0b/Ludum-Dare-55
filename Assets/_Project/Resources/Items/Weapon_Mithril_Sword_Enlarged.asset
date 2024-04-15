@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Mithril_Sword_Enlarged
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a8dd7234f9efda14b87807c77f407a69, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Enlarged Mithril Sword
+  flavourText: "Despite being taller than you are, this thing is light as a feather
+    and doesn\u2019t even catch the wind when you swing it."
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

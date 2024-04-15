@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Vibranium_Axe
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: ccfca13296cda7a4fbf8b3dd81299bc0, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Vibranium Axe
+  flavourText: "An axe that makes a medium clanging sound when you slap the blade.
+    You should gather some friends and start a band with this thing. \r"
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

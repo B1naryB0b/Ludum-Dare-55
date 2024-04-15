@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Component_Guard_Vibranium
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 8f0ea96f26873bd49bcd872ed4ebcae4, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Vibranium Guard
+  flavourText: "This vibranium guard will keep your hands safe while you fight with
+    your vibranium weapons.\r"
+  type: Component
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

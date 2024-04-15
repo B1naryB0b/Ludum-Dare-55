@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Component_Head_Iron
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: bc1bc69f3c97c074eaad08888651eddd, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Iron Head
+  flavourText: A big ball of iron made for smashing skulls.
+  type: Component
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

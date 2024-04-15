@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Uru_Hammer_Enlarged
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 303846485099786499a949582db0a069, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Uru Enlarged Hammer
+  flavourText: "Man, I bet if you had more of these, you could summon some kind of\u2026
+    legendary hammer that is the point of this entire game\r"
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

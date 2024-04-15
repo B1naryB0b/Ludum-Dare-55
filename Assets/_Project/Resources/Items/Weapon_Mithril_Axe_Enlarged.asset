@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Weapon_Mithril_Axe_Enlarged
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: b8cf126f2a46be044bad0fe9b2bea8db, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Enlarged Mithril Axe
+  flavourText: "You can cut wood from twice the distance now! That\u2019s like\u2026
+    a second or two of extra time to run when you\u2019ve realised the tree is falling
+    towards you."
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

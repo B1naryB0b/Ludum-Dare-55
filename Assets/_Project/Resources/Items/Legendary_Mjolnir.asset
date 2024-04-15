@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Legendary_Mjolnir
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: cc49e5f9b15a23545a7854adb0f9ef44, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Mjolnir
+  flavourText: "Damn, it\u2019s kind of heavy."
+  type: Legendary
   prefab: {fileID: 6845046265033252123, guid: c54bff81f4af0d4439736427bbcab15f, type: 3}
   velocityScaling: 0.5
   maxVelocity: 5

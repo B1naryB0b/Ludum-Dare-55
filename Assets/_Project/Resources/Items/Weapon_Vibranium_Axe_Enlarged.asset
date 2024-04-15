@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Vibranium_Axe_Enlarged
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 83c3a6408d8e93a40a7787928b77610c, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Enlarged Vibranium Axe
+  flavourText: Man, I bet if you had more of these, you could summon an axe that
+    has very little to do with norse mythology.
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

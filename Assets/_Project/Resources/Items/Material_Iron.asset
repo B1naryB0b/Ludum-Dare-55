@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Material_Iron
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: d324e5aaad4b2d2428097b85e8cc31f4, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Iron
+  flavourText: "It\u2019s iron! With some elbow grease (And maybe a sharpening rune),
+    you could get some of that rust off it."
+  type: Material
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 5

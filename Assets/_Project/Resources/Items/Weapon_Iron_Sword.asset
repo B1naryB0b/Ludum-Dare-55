@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Iron_Sword
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 093f019c0d3a1c84888a2d2ad5aed733, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Iron Sword
+  flavourText: "A classic weapon, it\u2019ll last you a while if you take good care
+    of it."
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

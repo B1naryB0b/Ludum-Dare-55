@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Legendary_Dainsleif
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 8f50202530ff6084d9d9945298c3e309, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Dainsleif
+  flavourText: "A sword that must kill a person each time it\u2019s unsheathed. Wounds
+    from it will never heal, so hope you know what you\u2019re doing with that thing.
+    Best to give it up, and maybe the gods will bless you.\r"
+  type: Legendary
   prefab: {fileID: 281744164476315040, guid: 0b130845c4220a74b845115d092ea411, type: 3}
   velocityScaling: 0.5
   maxVelocity: 5

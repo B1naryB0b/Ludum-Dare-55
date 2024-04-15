@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Rune_Upgrade
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 14be72e3482e90c4b898af09ddb55d11, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Bargain
+  flavourText: Return a weapon of the gods, and you will be greatly rewarded. Their
+    mercy truly knows no bounds!
+  type: Rune
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 5

@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Uru_Sword
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 00926b27802dc464081796f325a9a147, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Uru Sword
+  flavourText: "A sword made by dwarves in another realm. It\u2019s heavy, but you
+    can just about wield it."
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

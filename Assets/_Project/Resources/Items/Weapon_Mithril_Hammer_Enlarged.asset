@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Mithril_Hammer_Enlarged
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: acaae4ce090ad6a4495f4f3cc94687b4, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Enlarged Mithril Hammer
+  flavourText: "Size matters, they said, so you sized up. This thing feels kind of
+    floaty in your hands and you\u2019re not sure how you feel about it."
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

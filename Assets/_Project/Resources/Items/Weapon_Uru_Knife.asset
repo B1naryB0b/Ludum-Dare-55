@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Uru_Knife
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 4e8c0615d123a9844ba705dc0fa65efe, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Uru Knoif
+  flavourText: "A knife made of an unreasonably heavy metal. This has no business
+    being so heavy, it\u2019s ripping through your pocket on its own weight alone."
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

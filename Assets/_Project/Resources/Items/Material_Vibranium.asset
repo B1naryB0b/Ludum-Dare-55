@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Material_Vibranium
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 00536ec5137a0624dabc8e8692ccd1a9, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Uru Metal
+  flavourText: "From the realm of the dwarves, this metal has landed in your possession.
+    Use it well, and you\u2019ll find what you seek."
+  type: Material
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 5

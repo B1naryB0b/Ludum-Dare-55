@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Component_Blade_Vibranium
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: cced0faa06f8fac40bd4fd35adf66d44, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Vibranium Blade
+  flavourText: This vibranium blade is nice and sharp, ready to be made into a weapon
+    for slicing foes.
+  type: Component
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 20

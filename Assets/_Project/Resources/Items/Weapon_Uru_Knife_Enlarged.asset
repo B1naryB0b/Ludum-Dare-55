@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Uru_Knife_Enlarged
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 0217502d366b3414a9a0ef163e1038ba, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Enlarged Uru Knoif
+  flavourText: The last thing you needed from your unreasonably heavy knife was for
+    it to have more unreasonably heavy metal. You can barely lift it.
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

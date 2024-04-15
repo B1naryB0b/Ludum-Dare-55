@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Mithril_Sword
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 4aa047b852a04854d9fd7ead194d0247, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Mithril Sword
+  flavourText: "It\u2019s surprisingly light! You feel like you could use this thing
+    for hours and never get tired!"
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

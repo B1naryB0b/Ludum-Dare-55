@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Vibranium_Hammer_Enlarged
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 9e46e33e6f64db44d9a36e0e55c8a1df, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Enlarged Vibranium Hammer
+  flavourText: A hammer that makes a very low bwoinging sound when you hit it on
+    the ground. You should gather some friends and start a band with this thing.
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

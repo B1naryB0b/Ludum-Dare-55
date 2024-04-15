@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Mithril_Knife_Serrated
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 9d78b9d952d50234a930e7db589e482d, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Serrated Mithril Knoif
+  flavourText: "An extra light bottle opener. Great for parties, not great when you
+    don\u2019t realise it\u2019s still strapped to your belt."
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10

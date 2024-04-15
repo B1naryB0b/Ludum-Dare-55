@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Material_Uru
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a3658d86bf6decb4387bf4d9cc3569d5, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Vibranium
+  flavourText: "It\u2019s said that with each hit this metal takes, it absorbs the
+    vibration and deals that damage back on its next strike. Ongoing research has
+    also revealed that, despite this,  it\u2019s great for making music. A good,
+    heavy axe would do well with it.\r"
+  type: Material
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 5

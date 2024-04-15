@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Weapon_Uru_Knife_Serrated
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 317b0594a4fb2cc49936a62d02d3dce9, type: 3}
-  itemName: 
-  flavourText: 
+  itemName: Serrated Uru Knoif
+  flavourText: If you place it on a cabinet and never lift it, it makes for both
+    a cool mantlepiece and a stationary bottle opener.
+  type: Weapon
   prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10
