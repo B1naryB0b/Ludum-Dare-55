@@ -11,7 +11,7 @@ public class ItemSO : ScriptableObject
    public string itemName;
    [TextArea]
    public string flavourText;
-   public enum Type { Material, Rune, Component, Weapon, Legendary };
+   public string type;
    
    public GameObject prefab;
 
@@ -24,3 +24,4 @@ public class ItemSO : ScriptableObject
    [Header("Audio")] 
    public AudioClip impactSound;
 }
+ 

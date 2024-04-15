@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Rune_Upgrade_Recipe
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 11400000, guid: feb7f2c2b4d91414c8ec69e542518dc0, type: 2}
+  - {fileID: 11400000, guid: 90e6e715e736122458777a7a748045ba, type: 2}
   - {fileID: 11400000, guid: d7ab824150a4a5b4eb0f52b94f257c82, type: 2}
   summon: {fileID: 11400000, guid: 947f6b6b6876834439ca0305e2c5f669, type: 2}

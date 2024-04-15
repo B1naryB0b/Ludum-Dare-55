@@ -1,35 +1,38 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Collections;
+using TMPro;
 
-public class ToolTip : MonoBehaviour
+public class ToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public ItemSO item;
     public GameObject toolTipBox;
-    
-    private float _hoverTimeToActivate = 1f; // Time in seconds to wait before showing tooltip
-    private float _mouseMovementThreshold = 0.1f; // Threshold for mouse movement
+    public Button button;
+
+    private const float HoverTimeToActivate = 0.5f;
 
     private bool _isToolTipActive;
-    private Vector3 _lastMousePosition;
     private Coroutine _hoverCoroutine;
 
     private void Awake()
     {
-        gameObject.AddComponent<BoxCollider2D>();
+        if (button != null)
+        {
+            button.gameObject.AddComponent<EventTrigger>();
+        }
     }
 
-    private void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("Enter");
-        _lastMousePosition = Input.mousePosition;
         _hoverCoroutine = StartCoroutine(Co_ShowToolTipAfterDelay());
     }
 
-    private void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
+        Debug.Log("Exit");
         if (_hoverCoroutine != null)
         {
             StopCoroutine(_hoverCoroutine);
@@ -41,16 +44,18 @@ public class ToolTip : MonoBehaviour
     private IEnumerator Co_ShowToolTipAfterDelay()
     {
         Debug.Log("Hover");
-        yield return new WaitForSeconds(_hoverTimeToActivate);
-
-        if (Vector3.Distance(_lastMousePosition, Input.mousePosition) < _mouseMovementThreshold)
-        {
-            ShowToolTip();
-        }
+        yield return new WaitForSeconds(HoverTimeToActivate);
+        Debug.Log("Trigger");
+        ShowToolTip();
     }
 
     private void ShowToolTip()
     {
+        TextMeshProUGUI[] text = toolTipBox.GetComponentsInChildren<TextMeshProUGUI>();
+        text[0].text = item.itemName;
+        text[1].text = item.type;
+        text[2].text = item.flavourText;
+        
         toolTipBox.SetActive(true);
         _isToolTipActive = true;
     }
@@ -60,4 +65,5 @@ public class ToolTip : MonoBehaviour
         toolTipBox.SetActive(false);
         _isToolTipActive = false;
     }
+
 }

@@ -43,7 +43,7 @@ public class ItemWindow : MonoBehaviour
 
             RectTransform rectTransform = itemObject.GetComponent<RectTransform>();
             rectTransform.anchoredPosition = position;
-
+            
             Image image = itemObject.GetComponentsInChildren<Image>(true).FirstOrDefault(img => img.gameObject != itemObject);
             image.sprite = _items[i].sprite;
             
@@ -54,6 +54,7 @@ public class ItemWindow : MonoBehaviour
             ToolTip toolTip = itemObject.AddComponent<ToolTip>();
             toolTip.item = _items[i];
             toolTip.toolTipBox = toolTipPrefab;
+            toolTip.button = button;
         }
     }
 
