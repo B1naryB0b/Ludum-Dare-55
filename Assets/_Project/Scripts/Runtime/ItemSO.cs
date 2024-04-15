@@ -5,8 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ItemSO : ScriptableObject
 {
-   public string itemName;
-   
    [Header("Visual/Narrative")]
    public Sprite sprite;
    [TextArea]
@@ -17,4 +15,7 @@ public class ItemSO : ScriptableObject
    public float velocityScaling = 0.5f;
    public float maxVelocity = 10f;
    public float defaultGravity = 1f;
+
+   [Header("Audio")] 
+   public AudioClip impactSound;
 }

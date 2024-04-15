@@ -2747,9 +2747,21 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6775651607351389048, guid: d66dbcea34dcc184dbc09432a1abc3e4, type: 3}
+      propertyPath: startingItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: d7ab824150a4a5b4eb0f52b94f257c82, type: 2}
+    - target: {fileID: 6775651607351389048, guid: d66dbcea34dcc184dbc09432a1abc3e4, type: 3}
+      propertyPath: startingItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 90e6e715e736122458777a7a748045ba, type: 2}
+    - target: {fileID: 6775651607351389048, guid: d66dbcea34dcc184dbc09432a1abc3e4, type: 3}
+      propertyPath: startingItems.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3fba955e6e2ab2a4897468daae3c12b8, type: 2}
+    - target: {fileID: 6775651607351389048, guid: d66dbcea34dcc184dbc09432a1abc3e4, type: 3}
       propertyPath: startingItems.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 2e7bd95d91fc0d344bf7d918dbfc520b, type: 2}
+      objectReference: {fileID: 11400000, guid: d625b3c2d2f62b845a5ad6e30651e318, type: 2}
     - target: {fileID: 9003482301904562252, guid: d66dbcea34dcc184dbc09432a1abc3e4, type: 3}
       propertyPath: m_Name
       value: GameManager

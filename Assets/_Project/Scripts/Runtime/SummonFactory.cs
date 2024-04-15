@@ -101,17 +101,7 @@ public class SummonFactory : MonoBehaviour
     {
         foreach (var recipe in _recipes)
         {
-            bool allIngredientsMatch = true;
-            foreach (var ingredientSO in recipe.ingredients)
-            {
-                if (!ContainsIngredient(ingredientSO))
-                {
-                    allIngredientsMatch = false;
-                    break;
-                }
-            }
-
-            if (allIngredientsMatch)
+            if (AllIngredientsMatch(recipe))
             {
                 return recipe;
             }
@@ -119,6 +109,35 @@ public class SummonFactory : MonoBehaviour
 
         return null;
     }
+
+    private bool AllIngredientsMatch(RecipeSO recipe)
+    {
+        Dictionary<ItemSO, int> ingredientCount = new Dictionary<ItemSO, int>();
+
+        foreach (var ingredientObject in currentIngredients)
+        {
+            if (ingredientObject != null && _itemObjectMap.TryGetValue(ingredientObject, out var itemSO))
+            {
+                if (!ingredientCount.ContainsKey(itemSO))
+                {
+                    ingredientCount[itemSO] = 0;
+                }
+                ingredientCount[itemSO]++;
+            }
+        }
+
+        foreach (var ingredientSO in recipe.ingredients)
+        {
+            if (ingredientSO == null || !ingredientCount.ContainsKey(ingredientSO) || ingredientCount[ingredientSO] == 0)
+            {
+                return false;
+            }
+            ingredientCount[ingredientSO]--;
+        }
+
+        return true;
+    }
+
 
     private bool ContainsIngredient(ItemSO ingredient)
     {
@@ -155,7 +174,7 @@ public class SummonFactory : MonoBehaviour
     
     public void ConstructItem(ItemSO item)
     {
-        GameObject newItem = new GameObject(item.itemName);
+        GameObject newItem = new GameObject(item.name);
         newItem.transform.position = summonPoint.position;
 
         newItem.tag = "Ingredient";
@@ -168,6 +187,7 @@ public class SummonFactory : MonoBehaviour
 
         Rigidbody2D rb2D = newItem.AddComponent<Rigidbody2D>();
         rb2D.gravityScale = item.defaultGravity;
+        
 
         Drag dragComponent = newItem.AddComponent<Drag>();
         dragComponent.Configure(item);
