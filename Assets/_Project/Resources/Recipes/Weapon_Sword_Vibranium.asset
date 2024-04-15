@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd3f364f7430ab4fbb9c78456caab1b, type: 3}
+  m_Name: Weapon_Sword_Vibranium
+  m_EditorClassIdentifier: 
+  ingredients:
+  - {fileID: 11400000, guid: e7909391ae898c0499d42ce05ca01e28, type: 2}
+  - {fileID: 11400000, guid: 1fd4c61603f6a69489b6ba30473e7fc9, type: 2}
+  - {fileID: 11400000, guid: 39a557cce8c098d4da68677badc6bc22, type: 2}
+  summon: {fileID: 11400000, guid: 1cebba0f3198e704188f6b07909b238e, type: 2}

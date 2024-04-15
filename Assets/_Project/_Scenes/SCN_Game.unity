@@ -876,7 +876,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.06088292, g: 0.062153835, b: 0.06415099, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2153,6 +2153,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!1 &1715200736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715200738}
+  - component: {fileID: 1715200737}
+  m_Layer: 0
+  m_Name: CursorController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1715200737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715200736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a94a5cf737372348a698f6c755b83da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointer: {fileID: 2800000, guid: dd7221c7f57c4a84cac3c768e5115463, type: 3}
+  hover: {fileID: 2800000, guid: 7a4ae995d3fa7a046aed3ca8231c58e8, type: 3}
+  grab: {fileID: 2800000, guid: 29d915bac8d89b14ba0b8eb4ee2f4c36, type: 3}
+  hotspot: {x: 6, y: 0}
+--- !u!4 &1715200738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715200736}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1811351126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,6 +2787,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6775651607351389048, guid: d66dbcea34dcc184dbc09432a1abc3e4, type: 3}
+      propertyPath: maxItems
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775651607351389048, guid: d66dbcea34dcc184dbc09432a1abc3e4, type: 3}
       propertyPath: summonPoint
       value: 
       objectReference: {fileID: 27907278}
@@ -2789,3 +2841,4 @@ SceneRoots:
   - {fileID: 1047358980}
   - {fileID: 759775868}
   - {fileID: 452061863}
+  - {fileID: 1715200738}

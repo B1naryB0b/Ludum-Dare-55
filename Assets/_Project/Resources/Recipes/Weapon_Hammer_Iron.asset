@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd3f364f7430ab4fbb9c78456caab1b, type: 3}
+  m_Name: Weapon_Hammer_Iron
+  m_EditorClassIdentifier: 
+  ingredients:
+  - {fileID: 11400000, guid: e7909391ae898c0499d42ce05ca01e28, type: 2}
+  - {fileID: 11400000, guid: d08d3cd5abb6fe44da0927995e389dbc, type: 2}
+  - {fileID: 11400000, guid: d08d3cd5abb6fe44da0927995e389dbc, type: 2}
+  summon: {fileID: 11400000, guid: f8e8cca44cfe4274da5772965f8751f6, type: 2}

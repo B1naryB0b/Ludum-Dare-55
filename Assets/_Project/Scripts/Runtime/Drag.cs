@@ -15,11 +15,14 @@ public class Drag : MonoBehaviour
 
     private Rigidbody2D _rigidbody2D;
     private Camera _mainCamera;
+
+    private CursorController _cc;
     
     private void Awake()
     {
         _mainCamera = Camera.main;
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _cc = CursorController.Instance;
     }
 
     private void Update()
@@ -48,6 +51,21 @@ public class Drag : MonoBehaviour
         _defaultGravity = item.defaultGravity;
     }
 
+    private void OnMouseOver()
+    {
+        if (_cc == null) Debug.LogError("CC is null");
+        if (_cc.hover == null) Debug.LogError("CC.hover is null");
+        
+        if (_isDragging) return;
+        Cursor.SetCursor(_cc.hover, _cc.hotspot, CursorMode.Auto);
+    }
+
+    private void OnMouseExit()
+    {
+        if (_isDragging) return;
+        Cursor.SetCursor(_cc.pointer, _cc.hotspot, CursorMode.Auto);
+    }
+
     private void OnMouseDown()
     {
         if (Camera.main != null) _offset = transform.position - _mainCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -55,6 +73,8 @@ public class Drag : MonoBehaviour
         _isDragging = true;
 
         _rigidbody2D.gravityScale = 0f;
+
+        Cursor.SetCursor(_cc.grab, _cc.hotspot, CursorMode.Auto);
     }
 
     private void OnMouseUp()
@@ -62,5 +82,8 @@ public class Drag : MonoBehaviour
         _isDragging = false;
         
         _rigidbody2D.gravityScale = _defaultGravity;
+        
+        Cursor.SetCursor(_cc.pointer, _cc.hotspot, CursorMode.Auto);
+
     }
 }
