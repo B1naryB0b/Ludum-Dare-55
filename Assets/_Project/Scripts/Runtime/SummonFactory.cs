@@ -28,8 +28,11 @@ public class SummonFactory : MonoBehaviour
     {
         _unlockedItems = GetComponent<UnlockedItems>();
         _recipes = new List<RecipeSO>(Resources.LoadAll<RecipeSO>("Recipes"));
-        Debug.Log(_recipes[0].name);
-        
+
+        foreach (var recipe in _recipes)
+        {
+            //Debug.Log(recipe.name);
+        }
     }
     
     public void UpdateIngredient(int index, GameObject ingredient)
@@ -101,6 +104,7 @@ public class SummonFactory : MonoBehaviour
     {
         foreach (var recipe in _recipes)
         {
+            Debug.Log(recipe.name);
             if (AllIngredientsMatch(recipe))
             {
                 return recipe;
@@ -112,31 +116,42 @@ public class SummonFactory : MonoBehaviour
 
     private bool AllIngredientsMatch(RecipeSO recipe)
     {
-        Dictionary<ItemSO, int> ingredientCount = new Dictionary<ItemSO, int>();
+        Dictionary<ItemSO, int> presentIngredientCount = currentIngredients
+            .Where(ingredientObject => ingredientObject != null)
+            .Select(ingredientObject => _itemObjectMap[ingredientObject])
+            .GroupBy(itemSO => itemSO)
+            .ToDictionary(group => group.Key, group => group.Count());
 
-        foreach (var ingredientObject in currentIngredients)
+        Dictionary<ItemSO, int> requiredIngredientCount = recipe.ingredients
+            .GroupBy(itemSO => itemSO)
+            .ToDictionary(group => group.Key, group => group.Count());
+
+        if (presentIngredientCount.Values.Sum() != recipe.ingredients.Count())
         {
-            if (ingredientObject != null && _itemObjectMap.TryGetValue(ingredientObject, out var itemSO))
-            {
-                if (!ingredientCount.ContainsKey(itemSO))
-                {
-                    ingredientCount[itemSO] = 0;
-                }
-                ingredientCount[itemSO]++;
-            }
+            return false;
         }
 
-        foreach (var ingredientSO in recipe.ingredients)
+        foreach (var present in presentIngredientCount)
         {
-            if (ingredientSO == null || !ingredientCount.ContainsKey(ingredientSO) || ingredientCount[ingredientSO] == 0)
+            Debug.Log("Present Ingredient: " + present.Key.name + ", Count: " + present.Value);
+        }
+
+        foreach (var required in requiredIngredientCount)
+        {
+            Debug.Log("Required Ingredient: " + required.Key.name + ", Count: " + required.Value);
+        }
+
+        foreach (var requiredIngredient in requiredIngredientCount)
+        {
+            if (!presentIngredientCount.TryGetValue(requiredIngredient.Key, out int presentCount) || presentCount < requiredIngredient.Value)
             {
                 return false;
             }
-            ingredientCount[ingredientSO]--;
         }
 
         return true;
     }
+
 
 
     private bool ContainsIngredient(ItemSO ingredient)

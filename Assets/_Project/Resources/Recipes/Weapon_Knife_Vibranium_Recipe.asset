@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Weapon_Knife_Vibranium_Recipe
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 11400000, guid: 39a557cce8c098d4da68677badc6bc22, type: 2}
   - {fileID: 11400000, guid: e7909391ae898c0499d42ce05ca01e28, type: 2}
+  - {fileID: 11400000, guid: d2ee8759be877ae409c0ac54964be7fe, type: 2}
   summon: {fileID: 11400000, guid: 9a47fd59ea6cbd64ab3dcf90137d6c8f, type: 2}

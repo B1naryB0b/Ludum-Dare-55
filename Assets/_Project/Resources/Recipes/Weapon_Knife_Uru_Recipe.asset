@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Weapon_Knife_Uru_Recipe
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 11400000, guid: 182c54ab5e690e44f93b1a1a3f6e4d2f, type: 2}
   - {fileID: 11400000, guid: e7909391ae898c0499d42ce05ca01e28, type: 2}
+  - {fileID: 11400000, guid: d2ee8759be877ae409c0ac54964be7fe, type: 2}
   summon: {fileID: 11400000, guid: b75f79efc9c868a44812f20f46e8eaa8, type: 2}

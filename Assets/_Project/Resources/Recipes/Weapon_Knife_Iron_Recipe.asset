@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Weapon_Knife_Iron_Recipe
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 11400000, guid: d2ee8759be877ae409c0ac54964be7fe, type: 2}
   - {fileID: 11400000, guid: e7909391ae898c0499d42ce05ca01e28, type: 2}
+  - {fileID: 11400000, guid: d2ee8759be877ae409c0ac54964be7fe, type: 2}
   summon: {fileID: 11400000, guid: 1b8a974b6481e0147ac15b68de8d68ec, type: 2}
