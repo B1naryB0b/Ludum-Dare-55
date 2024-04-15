@@ -15,4 +15,4 @@ MonoBehaviour:
   ingredients:
   - {fileID: 11400000, guid: feb7f2c2b4d91414c8ec69e542518dc0, type: 2}
   - {fileID: 11400000, guid: de496920390a5ae43ad44b225018b290, type: 2}
-  summon: {fileID: 0}
+  summon: {fileID: 11400000, guid: 70c84119ef9705845951c8afbdfac940, type: 2}

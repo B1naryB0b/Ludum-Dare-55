@@ -34,8 +34,8 @@ public class MainMenu : MonoBehaviour
     public void Settings()
     {
         mainMenu.SetActive(false);
-        creditsMenu.SetActive(true);
-        currentMenu = creditsMenu;
+        settingsMenu.SetActive(true);
+        currentMenu = settingsMenu;
     }
 
     public void Tutorial()
@@ -48,8 +48,8 @@ public class MainMenu : MonoBehaviour
     public void Credits()
     {
         mainMenu.SetActive(false);
-        settingsMenu.SetActive(true);
-        currentMenu = settingsMenu;
+        creditsMenu.SetActive(true);
+        currentMenu = creditsMenu;
     }
 
     public void BackToMainMenu()

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Component_Blade_Uru
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 7c31fa0278007504d982e896e713dcf7, type: 3}
+  itemName: 
   flavourText: 
+  prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 20
   defaultGravity: 1

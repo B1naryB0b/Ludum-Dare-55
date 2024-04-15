@@ -7,8 +7,13 @@ public class ItemSO : ScriptableObject
 {
    [Header("Visual/Narrative")]
    public Sprite sprite;
+
+   public string itemName;
    [TextArea]
    public string flavourText;
+   public enum Type { Material, Rune, Component, Weapon, Legendary };
+   
+   public GameObject prefab;
 
    [Header("Movement")]
    [Range(0f, 1f)]

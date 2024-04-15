@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adeb12689e28dd848bf8fc4c564566de, type: 3}
   m_Name: Rune_Enlarge
   m_EditorClassIdentifier: 
-  itemName: Enlarge
   sprite: {fileID: 21300000, guid: c361c0ca8273a6a4ca9c113c24f5505f, type: 3}
+  itemName: 
   flavourText: 
+  prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 5
   defaultGravity: 2
+  impactSound: {fileID: 0}

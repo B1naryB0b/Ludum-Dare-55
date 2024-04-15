@@ -13,6 +13,8 @@ public class ItemWindow : MonoBehaviour
     [FormerlySerializedAs("gridOffset")] [SerializeField] private Vector2 offset;
     [FormerlySerializedAs("gridSpacing")] [SerializeField] private Vector2 spacing;
 
+    [SerializeField] private GameObject toolTipPrefab;
+
     private SummonFactory _summonFactory;
     private List<ItemSO> _items;
 
@@ -48,6 +50,10 @@ public class ItemWindow : MonoBehaviour
             Button button = itemObject.GetComponent<Button>();
             ItemSO currentItem = _items[i];
             button.onClick.AddListener(() => OnItemClick(currentItem));
+
+            ToolTip toolTip = itemObject.AddComponent<ToolTip>();
+            toolTip.item = _items[i];
+            toolTip.toolTipBox = toolTipPrefab;
         }
     }
 

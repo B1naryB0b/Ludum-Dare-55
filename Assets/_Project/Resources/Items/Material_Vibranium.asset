@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adeb12689e28dd848bf8fc4c564566de, type: 3}
   m_Name: Material_Vibranium
   m_EditorClassIdentifier: 
-  itemName: Vibranium
   sprite: {fileID: 21300000, guid: 00536ec5137a0624dabc8e8692ccd1a9, type: 3}
+  itemName: 
   flavourText: 
+  prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 5
   defaultGravity: 3
+  impactSound: {fileID: 0}

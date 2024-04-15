@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class SummonFactory : MonoBehaviour
 {
-
+    
     [SerializeField] private Transform summonPoint;
     [SerializeField] private List<ItemSO> startingItems;
     public List<ItemSO> StartingItems => startingItems;
@@ -189,21 +189,20 @@ public class SummonFactory : MonoBehaviour
     
     public void ConstructItem(ItemSO item)
     {
-        GameObject newItem = new GameObject(item.name);
-        newItem.transform.position = summonPoint.position;
-
+        GameObject newItem = Instantiate(item.prefab, summonPoint.position, Quaternion.identity);
+        newItem.name = item.name;
+        
         newItem.tag = "Ingredient";
 
-        SpriteRenderer spriteRenderer = newItem.AddComponent<SpriteRenderer>();
+        SpriteRenderer spriteRenderer = newItem.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = item.sprite;
+        
+        Rigidbody2D rb2D = newItem.AddComponent<Rigidbody2D>();
+        rb2D.gravityScale = item.defaultGravity;
 
         PolygonCollider2D col = newItem.AddComponent<PolygonCollider2D>();
         col.layerOverridePriority = 10;
-
-        Rigidbody2D rb2D = newItem.AddComponent<Rigidbody2D>();
-        rb2D.gravityScale = item.defaultGravity;
         
-
         Drag dragComponent = newItem.AddComponent<Drag>();
         dragComponent.Configure(item);
 

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Weapon_Iron_Knife_Serrated
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 19bdffd33a8085444a313716622eb045, type: 3}
+  itemName: 
   flavourText: 
+  prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10
   defaultGravity: 2

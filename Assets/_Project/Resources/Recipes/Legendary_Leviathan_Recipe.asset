@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6dd3f364f7430ab4fbb9c78456caab1b, type: 3}
-  m_Name: Weapon_Axe_Iron_Enlarged
+  m_Name: Legendary_Leviathan_Recipe
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 11400000, guid: feb7f2c2b4d91414c8ec69e542518dc0, type: 2}
-  - {fileID: 11400000, guid: 91c888f5e33b9ee4f9bd04567004f523, type: 2}
-  summon: {fileID: 0}
+  - {fileID: 11400000, guid: 70c84119ef9705845951c8afbdfac940, type: 2}
+  - {fileID: 11400000, guid: 70c84119ef9705845951c8afbdfac940, type: 2}
+  - {fileID: 11400000, guid: 70c84119ef9705845951c8afbdfac940, type: 2}
+  summon: {fileID: 11400000, guid: bdbac156a7e1d9146aae2a35ee987118, type: 2}

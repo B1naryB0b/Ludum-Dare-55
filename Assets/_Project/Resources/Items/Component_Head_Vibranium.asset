@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Component_Head_Vibranium
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 4ae8b65a245fc8041bed0fe245de45c4, type: 3}
+  itemName: 
   flavourText: 
+  prefab: {fileID: 787768599989972848, guid: c9fb4a2eed2a7a7419b9f8fe6e321c60, type: 3}
   velocityScaling: 0.5
   maxVelocity: 10
   defaultGravity: 2
