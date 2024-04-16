@@ -22,21 +22,33 @@ public class SummonFactory : MonoBehaviour
     private Dictionary<GameObject, ItemSO> _itemObjectMap = new Dictionary<GameObject, ItemSO>();
 
     private UnlockedItems _unlockedItems;
-
-
+    
     [SerializeField] private GameObject endScreen;
     [SerializeField] private AudioClip endAudio;
     
     void Start()
     {
         _unlockedItems = GetComponent<UnlockedItems>();
-        _recipes = new List<RecipeSO>(Resources.LoadAll<RecipeSO>("Recipes"));
-
-        foreach (var recipe in _recipes)
+        if (_unlockedItems == null)
         {
-            //Debug.Log(recipe.name);
+            Debug.LogError("UnlockedItems component not found on the GameObject.");
+            return;
+        }
+
+        if (summonPoint == null)
+        {
+            Debug.LogError("SummonPoint has not been assigned in the Inspector.");
+            return;
+        }
+
+        _recipes = new List<RecipeSO>(Resources.LoadAll<RecipeSO>("Recipes"));
+        if (_recipes == null || _recipes.Count == 0)
+        {
+            Debug.LogError("No RecipeSO objects found in Resources/Recipes.");
+            return;
         }
     }
+
     
     public void UpdateIngredient(int index, GameObject ingredient)
     {
@@ -192,6 +204,12 @@ public class SummonFactory : MonoBehaviour
     
     public void ConstructItem(ItemSO item)
     {
+        if (item == null || item.prefab == null)
+        {
+            Debug.LogError("ItemSO or its prefab is null.");
+            return;
+        }
+        
         GameObject newItem = Instantiate(item.prefab, summonPoint.position, Quaternion.identity);
         newItem.name = item.name;
         
