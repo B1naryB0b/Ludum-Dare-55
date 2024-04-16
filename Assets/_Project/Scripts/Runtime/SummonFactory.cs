@@ -23,6 +23,9 @@ public class SummonFactory : MonoBehaviour
 
     private UnlockedItems _unlockedItems;
 
+
+    [SerializeField] private GameObject endScreen;
+    [SerializeField] private AudioClip endAudio;
     
     void Start()
     {
@@ -212,6 +215,18 @@ public class SummonFactory : MonoBehaviour
         CheckItemCount();
         
         _unlockedItems.CheckIfUnlocked(item);
+
+        if (item.itemName == "Mjolnir")
+        {
+            StartCoroutine(Co_EndScreen());
+        }
+    }
+
+    IEnumerator Co_EndScreen()
+    {
+        AudioController.Instance.PlaySound(endAudio);
+        yield return new WaitForSeconds(5f);
+        endScreen.SetActive(true);
     }
 
     private void CheckItemCount()
